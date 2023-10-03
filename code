@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int v[1001], i, nrmax =-1001, aparMax = 0, n;
+
+int main()
+{
+    ofstream fout("maxim4.out");
+    ifstream fin("maxim4.in");
+    
+    fin >> n;
+    
+    for(i = 1; i <= n; i++)
+    {
+        fin >> v[i];
+        if(nrmax < v[i])
+        {
+            nrmax = v[i];
+        }
+    }
+    
+    for(i = 1; i <= n; i++)
+    {
+        if(v[i] == nrmax)
+        {
+        aparMax ++;
+        }
+    }
+    
+    fout << nrmax << " " << aparMax;
+    
+    return 0;
+}
